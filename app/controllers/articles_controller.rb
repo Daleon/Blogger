@@ -19,7 +19,7 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    @article.find(params[id]).destroy
+    @article.find(params[id])
     redirect '/articles'
   end
 
