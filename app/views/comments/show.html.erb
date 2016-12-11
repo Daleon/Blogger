@@ -1,0 +1,11 @@
+<h1><%= Comment.find(params[:id]).title %></h1>
+<p><%= Comment.find(params[:id]).body %></p>
+
+<h3>Comments</h3>
+<!-- <%= render partial: 'articles/comment', collection: @comment.comments.reverse %> -->
+
+<%= render partial: 'comments/form' %>
+
+<%= link_to "<< Back to Comments List", comments_path %>
+<%= link_to "delete", comment_path(@comment), method: :delete %>
+<%= link_to "edit", edit_comment_path(@comment) %>
